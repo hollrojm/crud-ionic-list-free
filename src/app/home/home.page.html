@@ -8,7 +8,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-button routerLink="/contacto" >
+  <ion-button routerLink="/contacto">
     Ir a Contacto
   </ion-button>
 
@@ -17,33 +17,52 @@
   </ion-button>
 
   <ion-item>
-    <ion-label >Nombre:</ion-label>
+    <ion-label>Nombre:</ion-label>
     <ion-input [(ngModel)]="nombre"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="floating">Apellido:</ion-label>
-    <ion-input></ion-input>
+    <ion-input [(ngModel)]="apellido"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="fixed">Celular:</ion-label>
-    <ion-input></ion-input>
+    <ion-input [(ngModel)]="celular"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="stacked">Email:</ion-label>
-    <ion-input></ion-input>
+    <ion-input [(ngModel)]="email"></ion-input>
   </ion-item>
+
 
   <ion-button color="success" (click)="guardarDatos()">
     Guardar
   </ion-button>
+  <ion-button color="danger" (click)="eliminarDatos()">
+    Eliminar
+  </ion-button>
+  <ion-button color="warning" (click)="editarDato()">Editar</ion-button>
 
   <ion-list>
     <ion-item *ngFor="let item of usuarios">
       <ion-label>{{ item.nombre }}</ion-label>
+
+
+    </ion-item>
+    <ion-item *ngFor="let item of usuarios">
+      <ion-label>{{ item.apellido }}</ion-label>
+
+    </ion-item>
+    <ion-item *ngFor="let item of usuarios">
+      <ion-label>{{ item.celular }}</ion-label>
+
+    </ion-item>
+    <ion-item *ngFor="let item of usuarios">
+      <ion-label>{{ item.email}}</ion-label>
+
     </ion-item>
   </ion-list>
-  
+
 </ion-content>

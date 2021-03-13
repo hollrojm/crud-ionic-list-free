@@ -18,9 +18,31 @@ export class HomePage {
   guardarDatos() {
     // Agregando datos a la base de datos en memoria
     this.usuarios.push({
-      nombre: this.nombre
+      nombre: this.nombre,
+      apellido: this.apellido,
+      celular: this.celular,
+      email: this.email
     })
     // Limpiando datos
     this.nombre = "";
+    this.apellido = "";
+    this.celular= "";
+    this.email="";
   }
+
+  editarDato(i){
+    
+
+};
+
+
+
+  eliminarDatos(index){
+
+    this.usuarios.splice(index, 1)
+    console.log(this.usuarios);
+
 }
+
+  }
+
