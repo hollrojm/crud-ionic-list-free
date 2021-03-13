@@ -43,12 +43,12 @@
   <ion-button color="danger" (click)="eliminarDatos()">
     Eliminar
   </ion-button>
-  <ion-button color="warning" (click)="editarDato()">Editar</ion-button>
+
 
   <ion-list>
-    <ion-item *ngFor="let item of usuarios">
+    <ion-item *ngFor="let item of usuarios; ">
       <ion-label>{{ item.nombre }}</ion-label>
-
+      <ion-button color="warning" (click)="editarDato()">Editar</ion-button>
 
     </ion-item>
     <ion-item *ngFor="let item of usuarios">

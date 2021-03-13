@@ -22,7 +22,10 @@ export class HomePage {
       apellido: this.apellido,
       celular: this.celular,
       email: this.email
+
     })
+    console.log(this.usuarios);
+
     // Limpiando datos
     this.nombre = "";
     this.apellido = "";
@@ -30,8 +33,12 @@ export class HomePage {
     this.email="";
   }
 
-  editarDato(i){
-    
+  editarDato(index){
+    let item = this.usuarios.findIndex(index)
+
+
+
+
 
 };
 
